@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+#logo{
+    color: #000;
+    line-height: 200%;
+}
+
+#sd{
+    text-align: center;
+}
+header {
+    background: #ccc;
+    color: #000000;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #010000;
+    text-decoration: none;
+    
+}
+
+nav ul li a:hover {
+    color: #1e00ff; /* Change text color on hover */
+} 
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-top: 10 px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+form input[type="submit"] {
+    background: #646161;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background: #555;
+}
+
+footer {
+    h2 {
+        color: #ecedf8;
+    }
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ecedf8;
+    /* background-image: url('https://th.bing.com/th/id/OIP.pqLd4QuF4HnV7_8ZiZ-ZaQHaEo?pid=ImgDet&w=474&h=296&rs=1'); */
+    height: 100vh;
+    margin: 0;
+}
+
+.chat-container {
+    width: 350px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#chatbox {
+    height: 300px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e9e9e9;
+}
+
+#chatbox p {
+    margin: 5px 0;
+}
+
+#userInput {
+    width: calc(100% - 60px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#sendBtn {
+    width: 50px;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+/* } */
+
+#sendBtn:hover {
+    background-color: #0056b3;
+}
+/* hello */
+.banner button {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.chat-icon-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chat-icon {
+    background-color: #FF3B3B;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-container {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+#chatbox {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+#userInput {
+    width: calc(100% - 60px);
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#sendBtn {
+    padding: 5px 10px;
+    background-color: #FF3B3B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#sendBtn:hover {
+    background-color: #cc3232;
+}
+
+#registrationForm input[type="submit"] {
+    width: auto; /* Allows the submit button to have a smaller width */
+    margin: 10px auto 0; /* Centers the submit button */
+    display: block; /* Ensures the submit button is centered */
+    padding: 10px; /* Adds padding inside the submit button */
+    background-color: #333; /* Background color of the submit button */
+    color: #fff; /* Text color of the submit button */
+    border: none; /* Removes the border of the submit button */
+    border-radius: 5px; /* Rounds the corners of the submit button */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+<body>
+    <header>
+        <h1>CAREER HELPER</h1>
+        <nav>
+            <ul>
+                <li><a id="logo" href="https://nikhil4850.github.io/Carrier-helper/">CAREERHELPER.com</a></li>
+                <li><a href="https://nikhil4850.github.io/Carrier-helper/"> Home</a></li>
+                <li><a href="https://nikhil4850.github.io/cources/">Cources</a></li>
+                <li><a href="https://nikhil4850.github.io/IQ-test/">IQ Test</a></li>
+                <li><a href="https://nikhil4850.github.io/consultant/">consultant</a></li>
+                <li><a href="https://nikhil4850.github.io/ccontact/">Contact</a></li>
+                <li><a href="https://nikhil4850.github.io/Login/">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="test-section">
+        <div class="container">
+            <div class="card-and-text">
+                <div class="test-card">
+                    <div class="test-content">
+                        <img src="https://th.bing.com/th/id/OIP.3Ru2ymsykqstBUMzZZakygHaHa?rs=1&pid=ImgDetMain" alt="Photo">
+                        <div class="test-details">
+                            <h3>Rakhi</h3>
+                            <ul class="test-info">
+                                <li>1 Years of Experience</li>
+                                <li>Best Guide in India</li>
+                            </ul>
+                            <div class="link-container">
+                                <a href="https://www.google.co.in/maps/place/Dapoli,+Maharashtra/@17.7667092,73.1680729,6726m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be9c3de665f4d7b:0x411a32d91e51e834!8m2!3d17.767697!4d73.1910115!16zL20vMGM0NXZx?entry=ttu&g_ep=EgoyMDI0MDkxMC4wIKXMDSoASAFQAw%3D%3D">
+                                    <div class="location">
+                                        <img src="https://www.freeiconspng.com/uploads/location-icon-png-14.png" alt="Location" style="width: 30px; height: 30px;">
+                                        <span>Dapoli</span>
+                                    </div>
+                                </a>
+                                <a href="https://chat.whatsapp.com/HPAbPV1dKmrCb7n1c674gq">
+                                    <div class="whatsapp-logo">
+                                        <img src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-1.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+                                    </div>
+                                </a>
+                            </div>
+                            <br>
+                            <a href="https://nikhil4850.github.io/enterdetails/">
+                                <button class="test-button">Click here to fix meeting</button>
+                            </a>
+                            <br>
+                            <img src="https://th.bing.com/th/id/OIP.ths2n2KOYbTlbdOd6fcOXAHaCd?rs=1&pid=ImgDetMain" style="width: 170px; height: 60px;">
+                        </div>
+                    </div>
+                    <div class="text-outside">
+                        <a href="https://nikhil4850.github.io/enterdetails/" >
+                            <img src="https://www.pngarts.com/files/7/Video-Call-PNG-Image-Transparent.png" style="width: 50px;">
+                           <h3>Appointment</h3>
+                        </a>
+                        
+                    </div>
+                </div>
+
+    
+                <!-- This div will contain the text you want outside the card -->
+                <div class="text-outside">
+                    <h2>Rakhi</h2>
+                    <br>
+                    <h4>"Career Counsellor , For the BestCareer Counseling"</h4>
+                    <p> Years of Experience, Expertise in Class 12 Counselling
+                        Miss Rakhi is a Certified Master Career Guide</p>
+                    <br>
+                    <a href="https://www.linkedin.com/in/harshadip-umbarkar-68687330a/">
+                        <img src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG10.png" style="width: 150px;">
+                    </a>
+                    <br>
+                    <p>
+                        Best career counselor in Lavel: Rakhi :
+                        Rakhi is an entrepreneur who is utilizing creativity, leadership, and teamwork to design - A marketplace to get instant career answers from career experts. Her engineering degree brings in a strong tech understanding, whereas her passion for education brings her close to the venture. Translating her passion into a business where every student can have answers to their career questions is what she dreams of. She is a task-focused leader and gives counseling.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+    
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+    
+        .card-and-text {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+    
+        .test-card {
+            background-color: #d4e3ec;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            height: 380px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+    
+        .test-card:hover {
+            transform: translateY(0.3s);
+        }
+    
+        .test-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    
+        .test-content img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+    
+        .test-details {
+            text-align: left;
+            flex-grow: 1;
+        }
+    
+        .test-details h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+    
+        .test-info {
+            list-style: none;
+            margin-bottom: 15px;
+        }
+    
+        .test-info li {
+            font-size: 16px;
+            color: #777;
+        }
+ 
+        .test-button {
+            background-color: #ff7f50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+    
+        .test-button:hover {
+            background-color: #ff5733;
+        }
+    
+        .text-outside {
+            max-width: 450px;
+            height: 350;
+            /* background-color: #f0f0f0; */
+            padding: 20px;
+            border-radius: 10px;
+            
+        }
+    
+        .text-outside h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+    
+        .text-outside p {
+            font-size: 14px;
+            color: #555;
+        }
+
+   /* Container to hold both links */
+   .link-container {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Flexbox to align image and text for location */
+    .location {
+        display: flex;
+        align-items: center;
+        margin-right: 20px; /* Space between the location and WhatsApp icon */
+    }
+
+    .location img {
+        margin-right: 10px;
+    }
+
+    .location span {
+        font-size: 16px;
+        color: black;
+    }
+
+    /* Styling for the WhatsApp logo */
+    .whatsapp-logo {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Styling for both links (optional) */
+    a {
+        text-decoration: none; /* Remove underline */
+    }
+
+    a:hover .location span {
+        color: #007bff; /* Change text color on hover */
+    }  
+    </style>
+    </section>
+    <footer>
+    <p class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: carrierhelper@gmail.com</p>
+        <p>Phone: 9766323998</p>
+    </p>
+    </footer>
+    <style>
+        .contact{
+            background-color: black;
+            color:#e81a1a ;
+        }
+    </style>
+    <div class="whatsapp-icon-container">
+        <div class="whatsapp-icon"><a href="https://chat.whatsapp.com/HPAbPV1dKmrCb7n1c674gq"><img src="https://logodownload.org/wp-content/uploads/2015/04/whatsapp-logo-1.png" alt="whatsapp" width="50px"></a></div>
+        <div class="whatsapp" id="whatsapp">
+            <div id="whatsapp">
+                
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <style>
+        .whatsapp-icon-container {
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        z-index: 1000;
+    }
+        .whatsapp-container {
+        display: none;
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        width: 300px;
+        background-color: white;
+        background-image: url('https://wallpapercave.com/wp/wp9473454.jpg');
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+    }
+    
+    #whatsappbox {
+        max-height: 200px;
+        overflow-y: auto;
+        margin-bottom: 10px;
+    }
+    .whatsapp-icon {
+
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    }
+    </style>
+    <div class="chat-icon-container">
+        <div class="chat-icon">💬</div>
+        <div class="chat-container" id="chat-container">
+            <div id="chatbox">
+                <p><strong>Nikhil :</strong> Hi! My Name is Nikhil. How can I help you today?</p>
+            </div>
+            <input type="text" id="userInput" placeholder="Type your message here...">
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.chat-icon').addEventListener('click', function() {
+    const chatContainer = document.getElementById('chat-container');
+    if (chatContainer.style.display === 'none' || chatContainer.style.display === '') {
+        chatContainer.style.display = 'block';
+    } else {
+        chatContainer.style.display = 'none';
+    }
+});
+
+document.getElementById('sendBtn').addEventListener('click', function() {
+    let userInput = document.getElementById('userInput').value.trim();
+    let chatbox = document.getElementById('chatbox');
+    
+    if (userInput !== "") {
+        chatbox.innerHTML += `<p><strong>You:</strong> ${userInput}</p>`;
+        document.getElementById('userInput').value = '';
+
+        // Simulate AI response
+        setTimeout(() => {
+            let aiResponse = getAIResponse(userInput);
+            chatbox.innerHTML += `<p><strong>Nikhil:</strong> ${aiResponse}</p>`;
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }, 1000);
+    }
+});
+
+function getAIResponse(input) {
+    // Simple AI response logic (you can replace this with an actual AI API)
+    const responses = {
+        "hello": "Hello! How can I assist you today?",
+        "how are you": "I'm just a guide to help!",
+        "what is your name": "I am your friendly Nikhil",
+        "nikhil": "Bol n",
+        "jevan zal": "Ho tuz",
+        "j1 zal": "Nahi karnar aata",
+        "nahi": "kadhi jevnar aahes",
+        "what i can do after 10th": "You may go to the consultants and then select 10th class for the information.",
+        "what i can do after tenth": "You may go to the consultants and then select 10th class for the information.",
+        "what i can do after ten": "You may go to the consultants and then select 10th class for the information.",
+        "what i can do after 12th": "You may go to the consultants and then select 12th class for the information.",
+        "what i can do after twelveeth": "You may go to the consultants and then select 12th class for the information.",
+        "what i can do after twelvee": "You may go to the consultants and then select 12th class for the information.",
+        "what i do after 10th": "You may go to the consultants and then select 10th class for the information.",
+        "mi ya website la pahu kashi":"Please Home var click kara"
+    };
+
+    let lowerInput = input.toLowerCase();
+    return responses[lowerInput] || "Sorry, I don't understand that.";
+}
+
+    </script>
+
+
+    <style>.chat-icon-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+    
+    .chat-icon {
+        background-color: #FF3B3B;
+        color: white;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .chat-container {
+        display: none;
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        width: 300px;
+        background-color: white;
+        background-image: url('https://wallpapercave.com/wp/wp9473454.jpg');
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 1000;
+    }
+    
+    #chatbox {
+        max-height: 200px;
+        overflow-y: auto;
+        margin-bottom: 10px;
+    }
+    
+    #userInput {
+        width: calc(100% - 60px);
+        padding: 5px;
+        margin-right: 10px;
+        
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    #sendBtn {
+        padding: 5px 10px;
+        background-color: #FF3B3B;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    #sendBtn:hover {
+        background-color: #cc3232;
+    }
+    </style>
+<style>
+    body {
+        position: relative;
+    }
+
+    nav {
+        position: fixed;
+        width: 100%;
+        height: 7vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        z-index: 100;
+        background-color: rgb(255, 245, 245);
+        box-shadow: 0px 0px 20px 0px #e81a1a;
+    }
+
+    .nav-ul {
+        display: flex;
+        list-style: none;
+        width: 75%;
+        align-items: center;
+        background-color: white;
+        margin: 1vh 0;
+        text-overflow: clip;
+        white-space: nowrap;
+        justify-content: space-around; 
+        font-size: 9px;
+    }
+    </style>
